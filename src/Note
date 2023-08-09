@@ -1,0 +1,1 @@
+To remove or check  duplicates one of the best way ,  is to use a HashMap<Integer, Integer> map
