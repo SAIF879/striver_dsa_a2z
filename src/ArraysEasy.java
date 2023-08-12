@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 
 public class ArraysEasy
 {
@@ -100,6 +102,58 @@ public class ArraysEasy
     }
 
 
+    public static List< Integer > sortedArray(int []a, int []b) {
+       int n = a.length;
+       int m = b.length;
+
+       ArrayList<Integer> list = new ArrayList<>();
+       int i = 0;
+       int j = 0;
+
+       while ( i < n && j < m){
+           if (a[i]<b[j]){
+               list.add(a[i]);i++;
+           }
+           else if(a[i]>b[j]){
+               list.add(b[j]);j++;
+           }
+           else {
+               list.add(a[i++]);j++;
+           }
+       }
+        //for left elements
+        while (i <n){
+            list.add(a[i++]);
+        }
+        while (j<m){
+            list.add(b[j++]);
+        }
+        return list;
+    }
+
+    public static int missingNumber(int[] nums) {
+       int n = nums.length;
+       int requiredSum = 0;
+       int missingSum = 0;
+       for(int i = 0 ; i <=n ; i++){
+           requiredSum+=i;
+       }
+       for (int i = 0 ; i < n ; i++){
+           missingSum +=nums[i];
+       }
+       return requiredSum-missingSum;
+    }
+
+
+//    public static int getSingleElement(int []arr){
+//       int n = arr.length;
+//        HashMap<Integer , Integer> map = new HashMap<>();
+//        int count = 1;
+//        for (int i = 0 ; i < n ; i++){
+//            if (arr[i])
+//        }
+//    }
+
 
 
 
@@ -137,6 +191,27 @@ public class ArraysEasy
 //        System.out.println(Arrays.toString(arr));
 
       //  rotateArray(arr , arr.length);
+
+
+        //find the union
+        //given two sorted arrays  return  the union
+//        int arr[] = {1,2,3,4,6};
+//        int brr[] = {2,3,5};
+        //expected output : {1,2,3,4,5,6};
+
+       // System.out.println(sortedArray(arr , brr));
+
+        //return the missing number
+        //given array from range[0,n] with n distint elements , return the missing number
+        int nums[] = {3,0,1};
+        //Output: 2
+      //  System.out.println(missingNumber(nums));
+
+        //print the length of the longest subarray whose sum is k
+        int arr[] = {1,2,3,1,1,1,1};
+        //output : 3 as {1,1,1};
+
+        //find the single element
 
 
 

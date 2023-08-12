@@ -1,1 +1,29 @@
 To remove or check  duplicates one of the best way ,  is to use a HashMap<Integer, Integer> map
+
+inPlace algorithm :
+outPlace algorithm :
+stable algorithm :
+
+sorting algorithms
+
+1. selection sort :
+
+time : O(n*n) space O(1)
+stable : not always but can be made via "stable selection sort"
+inPlace : yes , as it requires no extra space
+
+Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest)
+element from the unsorted portion of the list and moving it to the sorted portion of the list.
+
+
+2. bubble sort :
+
+time : O(n*n) space : O(1)
+stable : yes
+inPlace : yes , as no extra space needed
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the
+wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite
+high.
+
+* Repeatedly swap two adjacent elements if they are in wrong order
